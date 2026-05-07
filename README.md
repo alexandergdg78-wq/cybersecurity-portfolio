@@ -32,3 +32,11 @@ Hands-on practice with security tools.
 ## 🎯 Objetivo profesional / Career Goal
 Conseguir mi primer empleo como Analista de Ciberseguridad Junior (SOC).  
 Seeking first role as Junior SOC Analyst.
+🛠️ Lab 01: Gestión de Permisos y Mínimo Privilegio (Linux)
+Objetivo: Simular la protección de datos sensibles en un entorno de infraestructura para pagos.
+
+Acción: Creación de un archivo de datos confidenciales y restricción total de permisos mediante chmod 000.
+
+Resultado: Se verificó el bloqueo del sistema ante intentos de lectura no autorizados (Permission denied).
+
+Concepto aplicado: Principio de Mínimo Privilegio (PoLP).
