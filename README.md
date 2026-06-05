@@ -40,3 +40,14 @@ Acción: Creación de un archivo de datos confidenciales y restricción total de
 Resultado: Se verificó el bloqueo del sistema ante intentos de lectura no autorizados (Permission denied).
 
 Concepto aplicado: Principio de Mínimo Privilegio (PoLP).
+
+
+### 🛡️ Laboratorio de Análisis de Seguridad (SOC)
+*Prácticas enfocadas en la defensa y auditoría de sistemas Linux.*
+
+**Actividad reciente:** Auditoría forense en vivo y enumeración de sistemas.
+*   **Enumeración:** Identificación de usuarios del sistema mediante `/etc/passwd`.
+*   **Análisis de Procesos:** Monitoreo de recursos y servicios críticos (`ssm-agent`, `systemd-journald`) usando `ps aux`.
+*   **Objetivo:** Establecimiento de líneas base (baseline) de seguridad y detección de anomalías en entornos de producción.
+
+![Análisis de procesos Linux](Captura%20de%20pantalla%20(32).png)
