@@ -1,0 +1,28 @@
+
+# Análisis de Amenazas en Entorno SOC
+
+## Objetivo
+Realizar el triaje y enriquecimiento de una alerta de seguridad sospechosa mediante el análisis de reputación de archivos.
+
+## Escenario
+Se recibe una alerta en el SIEM detectando la ejecución de un archivo ejecutable no autorizado en un endpoint corporativo.
+
+## Metodología
+- **Herramienta:** VirusTotal.
+- **Acción:** Análisis de reputación utilizando el Hash (MD5/SHA-256) para confirmar si el archivo es malicioso (True Positive).
+- **Resultado:** Se confirma la detección como Ransomware (WannaCry).
+
+## Evidencias
+![Detección de Amenaza](virustotal_deteccion.png)
+![Detalles Técnicos](virustotal_detalles.png)
+
+## Conclusión
+Al confirmarse la naturaleza maliciosa, la acción inmediata requerida es:
+1. Aislamiento del endpoint afectado del resto de la red.
+2. Bloqueo del hash identificado en el EDR.
+3. Notificación al equipo de respuesta a incidentes (IR).
+
+
+
+
+
