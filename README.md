@@ -44,6 +44,35 @@ Concepto aplicado: Principio de Mínimo Privilegio (PoLP).
 
 ### 🛡️ Laboratorio de Análisis de Seguridad (SOC)
 *Prácticas enfocadas en la defensa y auditoría de sistemas Linux.*
+### 🔬 Lab 02: Triaje de Amenazas y Análisis de Reputación (VirusTotal)
+
+**Objetivo:** Realizar el triaje y enriquecimiento de una alerta de seguridad sospechosa en un endpoint.
+**Escenario:** Se recibe una alerta en el SIEM detectando la ejecución de un archivo desconocido. Se utiliza el Hash para investigar su naturaleza sin ejecutarlo localmente.
+**Resultado:** Se confirma la detección como *True Positive* correspondiente a un Ransomware (WannaCry).
+
+**Mapeo framework MITRE ATT&CK:**
+| Táctica (Tactic) | Técnica (Technique) | Descripción de la Amenaza |
+| :--- | :--- | :--- |
+| **Impact (TA0040)** | **Data Encrypted for Impact (T1486)** | El malware busca cifrar los datos del usuario para interrumpir la disponibilidad del sistema. |
+
+**Acción de Contención:**
+Aislamiento inmediato del host afectado de la red corporativa y bloqueo del Hash en el EDR.
+
+**Evidencias:**
+![Detección de Amenaza en VirusTotal](virustotal_deteccion.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Actividad reciente:** Auditoría forense en vivo y enumeración de sistemas.
 *   **Enumeración:** Identificación de usuarios del sistema mediante `/etc/passwd`.
