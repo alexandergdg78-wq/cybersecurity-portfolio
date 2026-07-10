@@ -79,7 +79,9 @@ Aislamiento inmediato del host afectado de la red corporativa y bloqueo del Hash
 | **Command and Control (TA0011)** | **Application Layer Protocol: Web Protocols (T1071.001)** | Uso de protocolos web estándar (HTTP/S) y redirecciones complejas para ocultar el C2. |
 
 **Evidencias:**
-![Análisis Técnico de Cadena de Redirección (urlscan)](Captura de pantalla (71).png)
+
+![Análisis Técnico de Cadena de Redirección](Captura%20de%20pantalla%20(71).png)
+
 
 
 
