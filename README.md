@@ -61,6 +61,43 @@ Aislamiento inmediato del host afectado de la red corporativa y bloqueo del Hash
 **Evidencias:**
 ![Detección de Amenaza en VirusTotal](virustotal_deteccion.png)
 
+### 🌐 Lab 04: Análisis Avanzado de Phishing con Cadenas de Redirección
+
+**Objetivo:** Investigar un incidente de Phishing complejo para identificar técnicas de evasión y anomalías geográficas.
+**Escenario:** Triaje manual de una URL sospechosa (`www.1wins365.online`). El analista detecta un comportamiento anómalo que las herramientas automáticas pasaron por alto.
+**Resultado:** Se confirma un *True Positive* de Phishing de alto nivel, utilizando redirecciones múltiples para ocultar la infraestructura maliciosa.
+
+**Nuevos Indicadores Técnicos y Anomalías Identificadas:**
+1. **Cadena de Redirección Sospechosa:** El atacante usa redirecciones complejas (HTTP -> HTTPS -> subdirectorio `/m/`) para evadir sistemas de detección automáticos.
+2. **Geografía Identificada:** Origen de la solicitud en Reino Unido (GB) escaneado desde Finlandia (FI), una combinación inusual para la supuesta marca objetivo.
+3. **Aspecto Visual Deceptivo:** El clon de la página final imita perfectamente a un sitio de apuestas legítimo ('1Win') para engañar a la víctima.
+
+**Mapeo framework MITRE ATT&CK:**
+| Táctica (Tactic) | Técnica (Technique) | Descripción de la Amenaza |
+| :--- | :--- | :--- |
+| **Initial Access (TA0001)** | **Phishing: Spearphishing Link (T1566.002)** | Uso de enlaces engañosos en campañas de Phishing masivas. |
+| **Command and Control (TA0011)** | **Application Layer Protocol: Web Protocols (T1071.001)** | Uso de protocolos web estándar (HTTP/S) y redirecciones complejas para ocultar el C2. |
+
+**Evidencias:**
+![Análisis Técnico de Cadena de Redirección (urlscan)](virustotal_redireccion.png)
+*(Reemplaza esta imagen con la captura que saque mostrando la Cadena de Redirección Y el Screenshot final)*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
