@@ -80,8 +80,31 @@ Aislamiento inmediato del host afectado de la red corporativa y bloqueo del Hash
 
 **Evidencias:**
 
-![Análisis Técnico de Cadena de Redirección](Captura%20de%20pantalla%20(71).png)
+![Análisis Técnico de Cadena de Redirección](Captura%20de%20pantalla%20(71).png) 
 
+
+
+### 🛡️ Lab 05: Inteligencia de Amenazas (CTI) y Triaje de IPs
+
+**Objetivo:** Analizar la reputación de direcciones IP sospechosas utilizando bases de datos de Inteligencia de Amenazas (OSINT).
+**Escenario:** Durante el monitoreo de red, se detectan múltiples intentos de conexión desde una IP externa (`198.23.210.153`). El analista debe determinar si es tráfico legítimo o infraestructura atacante.
+**Resultado:** Se clasifica la IP en la "Zona Gris" (56% de Confianza de Abuso), requiriendo revisión manual y bloqueo preventivo en el Firewall. Se identifica que la IP pertenece a un Data Center, ocultando el origen real del atacante.
+
+**Indicadores de Compromiso (IoCs) Identificados:**
+1. **Dirección IP:** `198.23.210.153`
+2. **Geolocalización:** Buffalo, New York (EE.UU.) - Uso estratégico de servidores norteamericanos para evadir bloqueos por geolocalización (Geo-blocking).
+3. **ISP y Tipo de Uso:** `HostPapa` (Data Center / Web Hosting). Confirmación de que es un servidor alquilado para lanzar ataques automatizados, no una red residencial.
+4. **Hostname Sospechoso:** `incubus.globalgoldplated.com`
+
+**Mapeo framework MITRE ATT&CK:**
+| Táctica (Tactic) | Técnica (Technique) | Descripción de la Amenaza |
+| :--- | :--- | :--- |
+| **Resource Development (TA0042)** | **Acquire Infrastructure: Virtual Private Server (T1583.003)** | El atacante alquila servidores en Data Centers comerciales (ej. HostPapa) para lanzar ataques de forma anónima. |
+| **Reconnaissance (TA0043)** | **Active Scanning (T1595)** | Escaneo de puertos y fuerza bruta lanzados desde la infraestructura comprometida. |
+
+**Evidencias:**
+
+![Triaje de IP en AbuseIPDB](Captura%20de%20pantalla%20(77).png)
 
 
 
