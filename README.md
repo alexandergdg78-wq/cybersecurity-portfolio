@@ -129,6 +129,7 @@ En el SOC, confirmar un acceso exitoso no es suficiente; es imperativo saber *c�
 **3. Criterio Analítico y Resolución**
 Un *Logon Type 5* (Service Logon) indica que la conexión no fue interactiva (realizada por un humano frente a la pantalla o vía red), sino que fue ejecutada por un componente interno o servicio de Windows operando en segundo plano.
 * **Veredicto Analítico:** Falso Positivo / Comportamiento Legítimo del sistema operativo. Incidente cerrado sin necesidad de escalamiento.
+<img width="1366" height="768" alt="Captura de pantalla (79)" src="https://github.com/user-attachments/assets/703c035a-75c4-4858-8c8a-ad4f171ae60b" />
 
 
 
