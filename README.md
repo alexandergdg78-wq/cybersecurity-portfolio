@@ -109,6 +109,28 @@ Aislamiento inmediato del host afectado de la red corporativa y bloqueo del Hash
 
 
 
+# 💻 Lab 06: Triaje de Registros de Seguridad (Windows Event Logs)
+
+## 🎯 Objetivo del Laboratorio
+Demostrar la capacidad de realizar un análisis de Nivel 1 (Tier 1) sobre eventos de seguridad en Windows, aislando falsos positivos mediante el filtrado de Event IDs y ejecutando forensia básica para determinar la legitimidad de las conexiones.
+
+## 🛠️ Herramienta Utilizada
+* Visor de Eventos de Windows (Windows Event Viewer)
+
+## 📝 Desarrollo del Análisis
+
+**1. Filtrado de Ruido (Aislamiento de Eventos)**
+El sistema operativo presentaba inicialmente un volumen superior a los 23.000 registros de seguridad. Para identificar accesos al equipo, apliqué un filtro aislando exclusivamente el **Event ID 4624** (Inicio de sesión exitoso). Esta acción redujo el "ruido" a una muestra manejable de ~5.200 eventos relevantes.
+
+**2. Forensia Básica (Extracción de Atributos)**
+En el SOC, confirmar un acceso exitoso no es suficiente; es imperativo saber *cómo* se accedió. Al analizar la información detallada de un evento 4624 específico, ubiqué el parámetro crítico de investigación: el **Tipo de inicio de sesión (Logon Type)**.
+* *Resultado hallado:* Tipo 5.
+
+**3. Criterio Analítico y Resolución**
+Un *Logon Type 5* (Service Logon) indica que la conexión no fue interactiva (realizada por un humano frente a la pantalla o vía red), sino que fue ejecutada por un componente interno o servicio de Windows operando en segundo plano.
+* **Veredicto Analítico:** Falso Positivo / Comportamiento Legítimo del sistema operativo. Incidente cerrado sin necesidad de escalamiento.
+
+
 
 
 
