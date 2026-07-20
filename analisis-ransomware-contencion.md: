@@ -1,4 +1,4 @@
-Análisis y Triaje de Incidente Crítico: Detección y Contención de Ransomware.
+analisis-ransomware-contencion.md
 
 1. Objetivo del Laboratorio
 Identificar los indicadores de compromiso (IoC) de un ataque de Ransomware en etapa de ejecución activa y aplicar los protocolos de contención inmediata para evitar la propagación lateral y la pérdida total de datos.
