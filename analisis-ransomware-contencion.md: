@@ -1,0 +1,22 @@
+Análisis y Triaje de Incidente Crítico: Detección y Contención de Ransomware.
+
+1. Objetivo del Laboratorio
+Identificar los indicadores de compromiso (IoC) de un ataque de Ransomware en etapa de ejecución activa y aplicar los protocolos de contención inmediata para evitar la propagación lateral y la pérdida total de datos.
+
+2. Análisis del Incidente (Triaje)
+
+Detección: El sistema EDR alertó sobre la modificación masiva y concurrente de archivos en el servidor principal de datos (SRV-DATOS-01), con una tasa de 500 modificaciones por segundo.
+
+Indicadores de Compromiso (IoCs):
+
+Cambio de extensión masivo en documentos ofimáticos y bases de datos a la extensión .lock, indicando un proceso activo de cifrado/encriptación.
+
+Ejecución del comando vssadmin.exe Delete Shadows /All /Quiet, una táctica clásica utilizada por atacantes para eliminar las copias de volumen oculto (backups locales) y forzar el pago del rescate.
+
+Creación de notas de rescate (.txt) en los directorios afectados.
+
+3. Acción de Respuesta (Mitigación y Escalado)
+
+Se procedió al aislamiento inmediato del servidor SRV-DATOS-01 a nivel de red (desconexión de switches/internet) para contener el cifrado y evitar el movimiento lateral del Ransomware hacia otras subredes o servidores de respaldo.
+
+Siguiendo el protocolo de Respuesta a Incidentes, se escaló la alerta roja de forma inmediata al Nivel 2 y al equipo de liderazgo del SOC, informando la contención de la amenaza inicial para proceder con la negociación o restauración desde respaldos fríos (Off-site backups).
