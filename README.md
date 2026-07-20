@@ -134,7 +134,9 @@ Un *Logon Type 5* (Service Logon) indica que la conexión no fue interactiva (re
 
 * [Análisis Forense de Cabeceras de Correo: Identificación de Falso Positivo (Phishing Triage)](analisis-phishing-osde.md)
 
-* [Análisis de Logs de Firewall: Detección y Contención de Escaneo de Puertos](analisis-firewall-reconocimiento.md) 
+* [Análisis de Logs de Firewall: Detección y Contención de Escaneo de Puertos](analisis-firewall-reconocimiento.md)
+
+* * [Análisis de Ejecución Anómala: Detección de Fileless Malware vía PowerShell](analisis-fileless-powershell.md)
 
 
 
