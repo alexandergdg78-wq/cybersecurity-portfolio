@@ -138,8 +138,7 @@ Un *Logon Type 5* (Service Logon) indica que la conexión no fue interactiva (re
 
 * * [Análisis de Ejecución Anómala: Detección de Fileless Malware vía PowerShell](analisis-fileless-powershell.md)
 
-* [Análisis y Triaje de Incidente Crítico: Detección y Contención de Ransomware](analisis-ransomware-contencion.md)
-
+* [Análisis y Triaje de Incidente Crítico: Ransomware](https://github.com/tu-usuario/tu-repo/blob/main/analisis-ransomware-contencion.md)
 
 
 
