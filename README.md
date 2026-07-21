@@ -140,6 +140,8 @@ Un *Logon Type 5* (Service Logon) indica que la conexión no fue interactiva (re
 
 * [Análisis y Triaje de Incidente Crítico: Ransomware](https://github.com/tu-usuario/tu-repo/blob/main/analisis-ransomware-contencion.md)
 
+* * [Análisis de Prevención de Pérdida de Datos (DLP): Detección de Exfiltración](analisis-exfiltracion-dlp.md)
+
 
 
 
